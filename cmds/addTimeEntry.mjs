@@ -38,14 +38,14 @@ export const handler = async function (argv) {
 
   let startTime, endTime
   if (dayjs(argv.startTime).isValid()) {
-    startTime = argv.startTime
+    startTime = dayjs(argv.startTime)
   } else {
     // Parse the time and set it based upon the current time
     startTime = parseTime(argv.startTime)
   }
 
   if (dayjs(argv.endTime).isValid()) {
-    endTime = argv.endTime
+    endTime = dayjs(argv.endTime)
   } else {
     // Parse the time and set it based upon the current time
     endTime = parseTime(argv.endTime)
